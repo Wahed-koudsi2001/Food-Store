@@ -310,15 +310,6 @@ nav .container ul li a.active, nav .container ul li a:hover {
     text-align: center;
 }
 
-.products .flex-And-space .change {
-    background-color: var(--primary-color);
-    color: #FFF;
-    padding: 8px;
-    border-radius: 4px;
-    height: fit-content;
-    cursor: pointer;
-}
-
 @media (max-width: 991px) {
     .products .flex-And-space {
         justify-content: center;
