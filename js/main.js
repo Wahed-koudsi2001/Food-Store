@@ -8,20 +8,21 @@ btn.onclick = function () {
 
 // Change Img In Products
 
-let pervious = document.getElementById('pervious');
-let next = document.getElementById('next');
-let imgChange = document.getElementById('imgchange');
-
-next.onclick = function () {
-    if (imgChange.hasAttribute('src')) {
-        imgChange.setAttribute('src', 'images/plate-3.png');
-    }
-}
-pervious.onclick = function () {
-    if (imgChange.hasAttribute('src')) {
-        imgChange.setAttribute('src', 'images/plate-2.png');
-    }
+let img = document.getElementById('img');
+let imgs =
+    [
+        'images/plate-1.png',
+        'images/plate-2.png',
+        'images/plate-3.png',
+    ]
+function changeImgs(img, imgs) {
+    setInterval(function () {
+        let randomImgs = Math.floor(Math.random() * imgs.length);
+        img.src = imgs[randomImgs];
+    }, 1500);
 };
+changeImgs(img, imgs);
+
 
 // Servises flip
 let btnOne = document.getElementById('btnOne');
